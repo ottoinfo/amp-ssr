@@ -1,0 +1,20 @@
+[ignore]
+.*/node_modules/fbjs/.*
+.*/node_modules/babel.*
+.*/node_modules/eslint-plugin.*
+.*/node_modules/styled-components/src.*
+
+[include]
+
+[libs]
+flow-typed
+
+[options]
+module.name_mapper='^apis\(\/?.*\)$' -> '<PROJECT_ROOT>/apis/\1'
+module.name_mapper='^apps\(\/?.*\)$' -> '<PROJECT_ROOT>/src/apps/\1'
+module.name_mapper='^components\(\/?.*\)$' -> '<PROJECT_ROOT>/src/components/\1'
+module.name_mapper='^dist\(\/?.*\)$' -> '<PROJECT_ROOT>/dist/\1'
+module.name_mapper='^pages\(\/?.*\)$' -> '<PROJECT_ROOT>/src/pages/\1'
+module.name_mapper='^types\(\/?.*\)$' -> '<PROJECT_ROOT>/src/types/\1'
+
+suppress_comment= \\(.\\|\n\\)*\\$FlowBug

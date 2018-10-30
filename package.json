@@ -1,0 +1,52 @@
+{
+  "name": "Saatchiart",
+  "version": "1.0.0",
+  "description": "React with Styled Components for AMP",
+  "main": "index.js",
+  "scripts": {
+    "build": "yarn clean && webpack --progress --colors",
+    "clean": "rm -rf ./dist",
+    "dev:server": "SITE_URL=http://local.saatchiart.com nodemon ./server.js localhost 9001",
+    "dev:webpack": "webpack --watch --inline --progress --open",
+    "server": "node ./server",
+    "validate": "eslint --cache src && flow check",
+    "test": "yarn build && node ./tests/validatePages && yarn validate"
+  },
+  "author": "Matt Otto <matt.otto@leafgroup.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "amphtml-validator": "^1.0.23",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-config-standard-react": "^7.0.2",
+    "eslint-import-resolver-babel-module": "^4.0.0",
+    "eslint-plugin-flowtype": "^3.1.4",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "flow-bin": "^0.85.0",
+    "fs": "^0.0.1-security",
+    "isomorphic-fetch": "^2.2.1",
+    "nodemon": "^1.18.5",
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "react": "^16.6.0",
+    "react-amp-template": "^4.0.0",
+    "react-dom": "^16.6.0",
+    "styled-components": "^4.0.2"
+  }
+}
